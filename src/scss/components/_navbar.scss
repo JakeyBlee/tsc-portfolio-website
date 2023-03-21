@@ -7,6 +7,14 @@
     top: 50px;
     z-index: 1;
     @include themed('background-color', 'background');
+    &::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        border-bottom: 2px solid;
+        @include themed('border-color', 'view-background');
+    }
     .navLinks {
         width: 100vw;
         display: flex;

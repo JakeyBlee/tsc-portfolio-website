@@ -22,7 +22,7 @@ export const data : Qualification[] = [
         title: 'iBSc Medical Education',
         organization: 'Cardiff University',
         image: 'cardiff.png',
-        date: 'July 2018',
+        date: 'July 2017',
         summary: "Single year intercalated bachelor's degree in Medical Education."
     },
     {
