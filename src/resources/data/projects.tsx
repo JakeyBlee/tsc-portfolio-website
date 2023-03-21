@@ -22,7 +22,9 @@ export const data : ProjectType[] = [
     },
     {
         title: 'Portfolio Website V2',
-        progress: 'current',
+        progress: 'past',
+        liveSite: 'https://jblackburn.netlify.app/',
+        repo: 'https://github.com/JakeyBlee/tsc-portfolio-website',
         image: 'portv2.png',
         buildDate: 'March 2023',
         summary: 'A complete rebuild of my previous portfolio website with the aim to update the underlying code to modern web-development technologies. Built around the React.js framework, in this project I utilised my recently acquired knowledge of TypeScript and SASS.',
