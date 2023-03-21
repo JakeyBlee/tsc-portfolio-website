@@ -1,0 +1,100 @@
+.workplaceCard{
+    width: 70vw;
+    padding-bottom: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & +.workplaceCard {
+        @include themed('border-top-color', 'text-color');
+        border-top: 2px solid;
+        padding-top: 30px;
+    }
+    
+    .jobTitle {
+        text-align: center;
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+    .jobDates {
+        padding-bottom: 1rem;
+        font-size: 20px;
+    }
+    .skillsWindow {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        @include themed('border-color', 'feature-border');
+        border: 2px solid;
+        border-radius: 1rem;
+        overflow: hidden;
+        .skillContainer {
+            @include themed('background-color', 'feature');
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: flex-start;
+            .skill {
+                width: fit-content;
+                white-space: nowrap;
+                padding-right: 3vw;
+                transition: none;
+                &::before {
+                    content: '•';
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .intro {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+    }
+    .jobText {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        p {
+            padding-bottom: 1rem;
+        }
+    }   
+    .showMore {
+        font-size: 20px;
+        font-weight: 700;
+        width: 250px;
+        text-align: center;
+        padding-top: 2vw;
+        transition: all 0.1s linear;
+        &:hover{
+            cursor: pointer;
+            @include themed('color', 'nav-color');
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media only screen and (max-width:600px){
+    .workplaceCard {
+        width: 85vw;
+        .jobTitle {
+            font-size: 20px;
+            padding-bottom: 5px;
+        }
+        .jobDates {
+            font-size: 16px;
+        }
+    }
+    .jobText, .intro {
+        p {
+            font-size: 14px;
+        }
+    }
+    .showMore p {
+        font-size: 16px;
+    }
+}

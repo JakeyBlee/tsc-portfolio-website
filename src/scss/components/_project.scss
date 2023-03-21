@@ -1,0 +1,136 @@
+.project {
+    display: grid;
+    grid-template: repeat(3, fit-content) / fit-content;
+    width: 400px;
+    margin: 0 30px 3vw;
+    .techInfo {
+        grid-area: 1 / 1 / 2 / 3;
+        h4 {
+            font-size: 20px;
+            text-align: left;
+            padding-bottom: 0px;
+        }
+        .dateInfo {
+            display: flex;
+            padding-bottom: 10px;
+            h5 {
+                padding-right: 5px;
+                font-size: 16px;
+            }
+        }
+    }
+    .siteAndTech {
+        display: flex;
+        justify-content: space-between;
+        .siteLink {
+            display: grid;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            height: fit-content;
+            width: fit-content;
+            img {
+                grid-area: 1 / 1 / 2 / 2;
+                border-radius: 10px;
+                width: 250px;
+                @include themed('border-color', 'feature-border');
+                border: 2px solid;
+            }
+            .linkContainer {
+                grid-area: 1 / 1 / 2 / 2;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+                a, p {
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    border-radius: 50px;
+                    color: black;
+                    background-color: white;
+                    opacity: 0.8;
+                    border-top: grey 3px solid;
+                    border-left: grey 3px solid;
+                    border-right: black 3px solid;
+                    border-bottom: black 3px solid;
+                    &:active {
+                        background-color: rgb(179, 179, 179);
+                        border-top: black 3px solid;
+                        border-left: black 3px solid;
+                        border-right: grey 3px solid;
+                        border-bottom: grey 3px solid;
+                    }
+                }
+            }
+        }
+        .techWindow {
+            display: flex;
+            justify-self: flex-end;
+            border-radius: 10px;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            @include themed('border-color', 'feature-border');
+            border: 2px solid;
+            .techContainer {
+                @include themed('background-color', 'feature');
+                display: flex;
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+                justify-content: flex-end;
+                text-align: center;
+                .tech {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .projectText {
+        grid-area: 3 / 1 / 4 / 2;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .project {
+        width: 100%;
+        margin: 0 0 40px;
+        &+ .project {
+            border-top: solid 2px;
+            @include themed('border-color', 'text-color');
+            padding-top: 5vw;
+        }
+        .techInfo {
+            h4 {
+                font-size: 16px;
+            }
+            .dateInfo {
+                display: flex;
+                padding-bottom: 10px;
+                h5, p {
+                    font-size: 14px;
+                }
+            }
+        }
+        .siteAndTech {
+            .siteLink { 
+                img {
+                height: 80px;
+                width: 160px;
+                }
+                .linkContainer {
+                    a, p {
+                        font-size: 14px;
+                        padding: 2px 10px;
+                    }
+                }
+            }
+            .techWindow {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
+}

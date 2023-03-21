@@ -1,0 +1,73 @@
+.qualifications{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template: 1fr / fit-content;
+    .filterButtons {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 30px;
+        transition: all 0.5s ease-in-out;
+        .filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 100px;
+            margin-right: 10px;
+            border-radius: 50px;
+            border-width: 3px;
+            @include themed('background-color', 'nav-color');
+            &:hover {
+                cursor: pointer;
+                @include themed('filter', 'themed-hover-filter');
+            }
+        }
+        .active {
+            @include themed('background-color', 'active-button');
+            font-weight: 700;
+        }
+    }
+    .title {
+        @include themed('color', 'text-color');
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    .section {
+        width: 100%;
+        padding-bottom: 50px;
+        h3 {
+            font-size: 28px;
+            @include themed('color', 'text-color');
+
+        }
+        & +.section {
+            @include themed('border-top-color', 'text-color');
+            border-top: 2px solid;
+            padding-top: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:600px){
+    .qualifications {
+        .title {
+            font-size: 30px;
+        }
+        .filterButtons {
+            padding-bottom: 20px;
+            .filter {
+                font-size: 10px;
+            }
+            
+        }
+        .section {
+            h3 {
+                font-size: 25px;
+            }
+        }
+    }
+}

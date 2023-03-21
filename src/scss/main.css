@@ -1,0 +1,985 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.light-theme .header {
+  background-color: #e6e6e6;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .header {
+  background-color: rgb(15, 15, 15);
+  transition: background-color 0.5s ease-in-out;
+}
+.header .pageInfo {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.header .pageInfo img {
+  position: relative;
+  z-index: 2;
+  height: 50px;
+  margin: 5px;
+  border: 2px solid;
+  border-radius: 999px;
+}
+.light-theme .header .pageInfo img {
+  border-color: black;
+  transition: border-color 0.5s ease-in-out;
+}
+.dark-theme .header .pageInfo img {
+  border-color: white;
+  transition: border-color 0.5s ease-in-out;
+}
+.header .pageInfo .siteName {
+  font-size: 22px;
+  margin: 10px;
+}
+.light-theme .header .pageInfo .siteName {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .header .pageInfo .siteName {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.header .themeSlider {
+  height: 40px;
+  width: 90px;
+  margin: 10px;
+  border: 2px rgb(90, 90, 90) solid;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.header .themeSlider:hover {
+  cursor: pointer;
+}
+.light-theme .header .themeSlider:hover {
+  filter: brightness(0.7);
+  transition: filter 0.5s ease-in-out;
+}
+.dark-theme .header .themeSlider:hover {
+  filter: brightness(1.7);
+  transition: filter 0.5s ease-in-out;
+}
+.header .themeSlider img {
+  height: inherit;
+  border: inherit;
+  position: relative;
+}
+.light-theme .header .themeSlider img {
+  right: 2px;
+  transition: right 0.5s ease-in-out;
+}
+.dark-theme .header .themeSlider img {
+  right: 92px;
+  transition: right 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 400px) {
+  .header .pageInfo .siteName {
+    font-size: 18px;
+  }
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("/src/resources/media/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 2.5/1;
+}
+.banner .hello h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 0 8rem;
+  padding: 0;
+}
+.banner .hello h2.jacob {
+  font-size: 10rem;
+  margin-left: 6rem;
+}
+.banner .hello h2.blackburn {
+  font-size: 10rem;
+  margin-left: 10rem;
+}
+.banner img.mobile {
+  padding: 10px;
+  border-radius: 50%;
+  display: none;
+}
+.light-theme .banner img.mobile {
+  background-color: #e6e6e6;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .banner img.mobile {
+  background-color: rgb(15, 15, 15);
+  transition: background-color 0.5s ease-in-out;
+}
+.banner .based {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 5rem 25rem;
+  text-align: center;
+}
+.banner .based h3 {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1600px) {
+  .banner .hello h2.jacob, .banner .hello h2.blackburn {
+    font-size: 8rem;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .banner .hello h3 {
+    font-size: 1.3rem;
+    margin: 2rem 0 0 3rem;
+  }
+  .banner .hello h2.jacob, .banner .hello h2.blackburn {
+    font-size: 6rem;
+  }
+  .banner .based {
+    margin: 0 0 3rem 13rem;
+  }
+  .banner .based h3 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .banner {
+    background-position: left;
+    background-size: auto;
+    align-items: center;
+    text-align: center;
+  }
+  .banner .hello h3 {
+    font-size: 1.2rem;
+    margin: 2rem 0 0 0;
+  }
+  .banner .hello h2.jacob, .banner .hello h2.blackburn {
+    font-size: 5rem;
+    margin-left: 0;
+  }
+  .banner img.mobile {
+    display: block;
+    width: 18rem;
+    height: 18rem;
+    margin: 1rem;
+  }
+  .banner .based {
+    width: 100%;
+    margin: 0 0 5rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .banner .hello h2.jacob, .banner .hello h2.blackburn {
+    font-size: 3rem;
+    margin-left: 0;
+  }
+}
+.navbar {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  top: 50px;
+  z-index: 1;
+}
+.light-theme .navbar {
+  background-color: #e6e6e6;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .navbar {
+  background-color: rgb(15, 15, 15);
+  transition: background-color 0.5s ease-in-out;
+}
+.navbar .navLinks {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.light-theme .navbar .navLinks {
+  color: rgb(175, 175, 175);
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .navbar .navLinks {
+  color: grey;
+  transition: color 0.5s ease-in-out;
+}
+.navbar .navLinks .navLink {
+  font-size: 18px;
+  width: 250px;
+  text-align: center;
+  padding: 0.5vw;
+  white-space: nowrap;
+  transition: all 0.3s linear;
+}
+.navbar .navLinks .navLink:hover {
+  cursor: pointer;
+}
+.light-theme .navbar .navLinks .navLink:hover {
+  filter: brightness(0.7);
+  transition: filter 0.5s ease-in-out;
+}
+.dark-theme .navbar .navLinks .navLink:hover {
+  filter: brightness(1.7);
+  transition: filter 0.5s ease-in-out;
+}
+.navbar .navLinks .active {
+  font-weight: 700;
+}
+.light-theme .navbar .navLinks .active {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .navbar .navLinks .active {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 1050px) {
+  .navbar .navLinks .navLink {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbar .navLinks .navLink {
+    font-size: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .navbar .navLinks .active {
+    font-size: 14px;
+  }
+}
+#app {
+  min-height: 100vh;
+}
+
+.viewBackground {
+  min-height: calc(100vh - 500px);
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.light-theme .viewBackground {
+  background-color: #a8a5a0;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .viewBackground {
+  background-color: rgb(53, 53, 53);
+  transition: background-color 0.5s ease-in-out;
+}
+.viewBackground .view {
+  width: 80%;
+  margin: 30px 0;
+  padding: 5vw;
+  padding-top: 3vw;
+  padding-bottom: 0;
+  border-radius: 10px;
+}
+.light-theme .viewBackground .view {
+  background-color: #e6e6e6;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .viewBackground .view {
+  background-color: rgb(15, 15, 15);
+  transition: background-color 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .viewBackground .view {
+    width: 95%;
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+  .viewBackground::before {
+    content: "<-- Swipe to Navigate -->";
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .light-theme .viewBackground::before {
+    color: black;
+    transition: color 0.5s ease-in-out;
+  }
+  .dark-theme .viewBackground::before {
+    color: white;
+    transition: color 0.5s ease-in-out;
+  }
+}
+.profile {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template: repeat(2, fit-content)/1fr 3fr;
+}
+.profile .title {
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 20px;
+  grid-area: 1/1/2/2;
+}
+.light-theme .profile .title {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .profile .title {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.profile .desktop {
+  max-width: 20vw;
+  max-height: 250px;
+  padding: 0.5vw;
+  margin-bottom: 5vw;
+  margin-left: 5vw;
+  border-radius: 50%;
+  grid-area: 2/2/3/3;
+}
+.light-theme .profile .desktop {
+  background-color: black;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .profile .desktop {
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+.profile .textArea {
+  max-width: 750px;
+  grid-area: 2/1/3/2;
+  padding-bottom: 5vw;
+}
+.light-theme .profile .textArea {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .profile .textArea {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.profile .textArea .text {
+  padding-bottom: 1rem;
+}
+.profile .textArea .text span {
+  font-weight: bolder;
+}
+.profile .textArea .text .code {
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1200px) {
+  .profile .desktop {
+    display: none;
+  }
+  .profile .text {
+    grid-area: 2/1/3/2;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .profile .title {
+    font-size: 30px;
+  }
+  .profile .text {
+    font-size: 14px;
+  }
+}
+.employment {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template: 1fr/fit-content;
+}
+.employment .title {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 20px;
+  grid-area: 1/1/2/2;
+}
+.light-theme .employment .title {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .employment .title {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.employment .workplaceArea {
+  grid-area: 2/1/3/2;
+}
+.light-theme .employment .workplaceArea {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .employment .workplaceArea {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .employment .title {
+    font-size: 30px;
+  }
+}
+.workplaceCard {
+  width: 70vw;
+  padding-bottom: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.workplaceCard + .workplaceCard {
+  border-top: 2px solid;
+  padding-top: 30px;
+}
+.light-theme .workplaceCard + .workplaceCard {
+  border-top-color: black;
+  transition: border-top-color 0.5s ease-in-out;
+}
+.dark-theme .workplaceCard + .workplaceCard {
+  border-top-color: white;
+  transition: border-top-color 0.5s ease-in-out;
+}
+.workplaceCard .jobTitle {
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+.workplaceCard .jobDates {
+  padding-bottom: 1rem;
+  font-size: 20px;
+}
+.workplaceCard .skillsWindow {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border: 2px solid;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.light-theme .workplaceCard .skillsWindow {
+  border-color: #354259;
+  transition: border-color 0.5s ease-in-out;
+}
+.dark-theme .workplaceCard .skillsWindow {
+  border-color: grey;
+  transition: border-color 0.5s ease-in-out;
+}
+.workplaceCard .skillsWindow .skillContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.light-theme .workplaceCard .skillsWindow .skillContainer {
+  background-color: #ffffff;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .workplaceCard .skillsWindow .skillContainer {
+  background-color: rgb(45, 45, 45);
+  transition: background-color 0.5s ease-in-out;
+}
+.workplaceCard .skillsWindow .skillContainer .skill {
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  padding-right: 3vw;
+  transition: none;
+}
+.workplaceCard .skillsWindow .skillContainer .skill::before {
+  content: "•";
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.workplaceCard .intro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.workplaceCard .jobText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.workplaceCard .jobText p {
+  padding-bottom: 1rem;
+}
+.workplaceCard .showMore {
+  font-size: 20px;
+  font-weight: 700;
+  width: 250px;
+  text-align: center;
+  padding-top: 2vw;
+  transition: all 0.1s linear;
+}
+.workplaceCard .showMore:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.light-theme .workplaceCard .showMore:hover {
+  color: rgb(175, 175, 175);
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .workplaceCard .showMore:hover {
+  color: grey;
+  transition: color 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .workplaceCard {
+    width: 85vw;
+  }
+  .workplaceCard .jobTitle {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  .workplaceCard .jobDates {
+    font-size: 16px;
+  }
+  .jobText p, .intro p {
+    font-size: 14px;
+  }
+  .showMore p {
+    font-size: 16px;
+  }
+}
+.qualifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-template: 1fr/fit-content;
+}
+.qualifications .filterButtons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 30px;
+  transition: all 0.5s ease-in-out;
+}
+.qualifications .filterButtons .filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 50px;
+  border-width: 3px;
+}
+.light-theme .qualifications .filterButtons .filter {
+  background-color: rgb(175, 175, 175);
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .qualifications .filterButtons .filter {
+  background-color: grey;
+  transition: background-color 0.5s ease-in-out;
+}
+.qualifications .filterButtons .filter:hover {
+  cursor: pointer;
+}
+.light-theme .qualifications .filterButtons .filter:hover {
+  filter: brightness(0.7);
+  transition: filter 0.5s ease-in-out;
+}
+.dark-theme .qualifications .filterButtons .filter:hover {
+  filter: brightness(1.7);
+  transition: filter 0.5s ease-in-out;
+}
+.qualifications .filterButtons .active {
+  font-weight: 700;
+}
+.light-theme .qualifications .filterButtons .active {
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .qualifications .filterButtons .active {
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+.qualifications .title {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.light-theme .qualifications .title {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .qualifications .title {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.qualifications .section {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.qualifications .section h3 {
+  font-size: 28px;
+}
+.light-theme .qualifications .section h3 {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .qualifications .section h3 {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.qualifications .section + .section {
+  border-top: 2px solid;
+  padding-top: 30px;
+}
+.light-theme .qualifications .section + .section {
+  border-top-color: black;
+  transition: border-top-color 0.5s ease-in-out;
+}
+.dark-theme .qualifications .section + .section {
+  border-top-color: white;
+  transition: border-top-color 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .qualifications .title {
+    font-size: 30px;
+  }
+  .qualifications .filterButtons {
+    padding-bottom: 20px;
+  }
+  .qualifications .filterButtons .filter {
+    font-size: 10px;
+  }
+  .qualifications .section h3 {
+    font-size: 25px;
+  }
+}
+.result {
+  width: 100%;
+  padding-top: 20px;
+  display: grid;
+  grid-template: repeat(3, fit-content)/fit-content fit-content;
+}
+.light-theme .result {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .result {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.result h4 {
+  font-size: 24px;
+  grid-area: 1/1/2/2;
+}
+.result .textArea {
+  grid-area: 2/1/3/2;
+}
+.result .description {
+  grid-area: 3/1/4/3;
+}
+.result .origin, .result .date {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.result .origin h5, .result .date h5 {
+  padding-right: 5px;
+}
+.result img {
+  height: 100px;
+  display: flex;
+  justify-self: flex-end;
+  grid-area: 1/2/3/3;
+}
+
+@media only screen and (max-width: 600px) {
+  .result h4 {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+  .result .textArea {
+    grid-area: 2/1/3/3;
+  }
+  .result .textArea, .result .description {
+    font-size: 14px;
+  }
+  .result .origin, .result .date {
+    padding-bottom: 0.5rem;
+  }
+  .result img {
+    height: 50px;
+    padding-top: 5px;
+    grid-area: 1/1/3/3;
+  }
+}
+.projects {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template: repeat(2, fit-content)/1fr 3fr;
+}
+.projects .title {
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 30px;
+  grid-area: 1/1/2/2;
+}
+.light-theme .projects .title {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .projects .title {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.projects .projectContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.light-theme .projects .projectContainer {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .projects .projectContainer {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects .title {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+}
+.project {
+  display: grid;
+  grid-template: repeat(3, fit-content)/fit-content;
+  width: 400px;
+  margin: 0 30px 3vw;
+}
+.project .techInfo {
+  grid-area: 1/1/2/3;
+}
+.project .techInfo h4 {
+  font-size: 20px;
+  text-align: left;
+  padding-bottom: 0px;
+}
+.project .techInfo .dateInfo {
+  display: flex;
+  padding-bottom: 10px;
+}
+.project .techInfo .dateInfo h5 {
+  padding-right: 5px;
+  font-size: 16px;
+}
+.project .siteAndTech {
+  display: flex;
+  justify-content: space-between;
+}
+.project .siteAndTech .siteLink {
+  display: grid;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.project .siteAndTech .siteLink img {
+  grid-area: 1/1/2/2;
+  border-radius: 10px;
+  width: 250px;
+  border: 2px solid;
+}
+.light-theme .project .siteAndTech .siteLink img {
+  border-color: #354259;
+  transition: border-color 0.5s ease-in-out;
+}
+.dark-theme .project .siteAndTech .siteLink img {
+  border-color: grey;
+  transition: border-color 0.5s ease-in-out;
+}
+.project .siteAndTech .siteLink .linkContainer {
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.project .siteAndTech .siteLink .linkContainer a, .project .siteAndTech .siteLink .linkContainer p {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: black;
+  background-color: white;
+  opacity: 0.8;
+  border-top: grey 3px solid;
+  border-left: grey 3px solid;
+  border-right: black 3px solid;
+  border-bottom: black 3px solid;
+}
+.project .siteAndTech .siteLink .linkContainer a:active, .project .siteAndTech .siteLink .linkContainer p:active {
+  background-color: rgb(179, 179, 179);
+  border-top: black 3px solid;
+  border-left: black 3px solid;
+  border-right: grey 3px solid;
+  border-bottom: grey 3px solid;
+}
+.project .siteAndTech .techWindow {
+  display: flex;
+  justify-self: flex-end;
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border: 2px solid;
+}
+.light-theme .project .siteAndTech .techWindow {
+  border-color: #354259;
+  transition: border-color 0.5s ease-in-out;
+}
+.dark-theme .project .siteAndTech .techWindow {
+  border-color: grey;
+  transition: border-color 0.5s ease-in-out;
+}
+.project .siteAndTech .techWindow .techContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+.light-theme .project .siteAndTech .techWindow .techContainer {
+  background-color: #ffffff;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .project .siteAndTech .techWindow .techContainer {
+  background-color: rgb(45, 45, 45);
+  transition: background-color 0.5s ease-in-out;
+}
+.project .siteAndTech .techWindow .techContainer .tech {
+  font-size: 14px;
+}
+.project .projectText {
+  grid-area: 3/1/4/2;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+  .project {
+    width: 100%;
+    margin: 0 0 40px;
+  }
+  .project + .project {
+    border-top: solid 2px;
+    padding-top: 5vw;
+  }
+  .light-theme .project + .project {
+    border-color: black;
+    transition: border-color 0.5s ease-in-out;
+  }
+  .dark-theme .project + .project {
+    border-color: white;
+    transition: border-color 0.5s ease-in-out;
+  }
+  .project .techInfo h4 {
+    font-size: 16px;
+  }
+  .project .techInfo .dateInfo {
+    display: flex;
+    padding-bottom: 10px;
+  }
+  .project .techInfo .dateInfo h5, .project .techInfo .dateInfo p {
+    font-size: 14px;
+  }
+  .project .siteAndTech .siteLink img {
+    height: 80px;
+    width: 160px;
+  }
+  .project .siteAndTech .siteLink .linkContainer a, .project .siteAndTech .siteLink .linkContainer p {
+    font-size: 14px;
+    padding: 2px 10px;
+  }
+  .project .siteAndTech .techWindow {
+    height: 80px;
+    width: 80px;
+  }
+}
+.footer {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.light-theme .footer {
+  background-color: #e6e6e6;
+  transition: background-color 0.5s ease-in-out;
+}
+.dark-theme .footer {
+  background-color: rgb(15, 15, 15);
+  transition: background-color 0.5s ease-in-out;
+}
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.light-theme .footer h3 {
+  color: black;
+  transition: color 0.5s ease-in-out;
+}
+.dark-theme .footer h3 {
+  color: white;
+  transition: color 0.5s ease-in-out;
+}
+.footer img {
+  width: 40px;
+  border-radius: 50%;
+  padding: 2px;
+  margin: 0 15px;
+  background-color: white;
+}
+.footer img:hover {
+  transform: scale(1.3);
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* h1, * h2 {
+  font-family: "Arvo";
+}/*# sourceMappingURL=main.css.map */

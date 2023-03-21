@@ -1,0 +1,35 @@
+@mixin themed($property, $variable-name) {
+    @each $theme, $theme-property in $themes {
+        .#{$theme} & {
+            #{$property}: map-get(map-get($themes, $theme), $variable-name);
+            transition: #{$property} 0.5s ease-in-out;
+        }
+    }
+};
+  
+$themes: (
+    light-theme: (
+      background: #e6e6e6,
+      view-background: #a8a5a0,
+      feature: #ffffff,
+      feature-border: #354259,
+      text-color: black,
+      nav-color: rgb(175, 175, 175),
+      nav-active-color: black,
+      theme-img-offset: 2px,
+      themed-hover-filter: brightness(0.7),
+      active-button: white
+    ),
+    dark-theme: (
+      background: rgb(15, 15, 15),
+      view-background: rgb(53, 53, 53),
+      feature: rgb(45, 45, 45),
+      feature-border: grey,
+      text-color: white,
+      nav-color: grey,
+      nav-active-color: white,
+      theme-img-offset: 92px,
+      themed-hover-filter: brightness(1.7),
+      active-button: white
+    )
+);

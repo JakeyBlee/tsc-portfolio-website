@@ -1,0 +1,25 @@
+.employment{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template: 1fr / fit-content;
+    .title {
+        @include themed('color', 'text-color');
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 20px;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .workplaceArea {
+        grid-area: 2 / 1 / 3 / 2;
+        @include themed('color', 'text-color');
+    }
+}
+
+@media only screen and (max-width:600px){
+    .employment {
+        .title {
+            font-size: 30px;
+        }
+    }
+}
