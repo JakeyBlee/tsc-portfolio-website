@@ -24,18 +24,18 @@ export const Navbar = (props : any) => {
     return (
         <section className='navbar'>
             <div className='navLinks'>
-                <div className='navLink active' onClick={handleNav}>
+                <button className='navLink active' onClick={handleNav}>
                     &#60;Profile /&#62;
-                </div>
-                <div className='navLink' onClick={handleNav}>
+                </button>
+                <button className='navLink' onClick={handleNav}>
                     &#60;Employment /&#62;
-                </div>
-                <div className='navLink' onClick={handleNav}>
+                </button>
+                <button className='navLink' onClick={handleNav}>
                     &#60;Qualifications /&#62;
-                </div>                
-                <div className='navLink' onClick={handleNav}>
+                </button>                
+                <button className='navLink' onClick={handleNav}>
                     &#60;Projects /&#62;
-                </div>
+                </button>
             </div>
         </section>
     )

@@ -14,10 +14,11 @@ $themes: (
       feature: #ffffff,
       feature-border: #354259,
       text-color: black,
-      nav-color: rgb(175, 175, 175),
+      nav-color: rgb(62, 62, 62),
       nav-active-color: black,
-      theme-img-offset: 2px,
+      theme-img-offset: 8px,
       themed-hover-filter: brightness(0.7),
+      button-color: rgb(185, 185, 185),
       active-button: white
     ),
     dark-theme: (
@@ -28,8 +29,9 @@ $themes: (
       text-color: white,
       nav-color: grey,
       nav-active-color: white,
-      theme-img-offset: 92px,
+      theme-img-offset: 98px,
       themed-hover-filter: brightness(1.7),
+      button-color: grey,
       active-button: white
     )
 );

@@ -64,7 +64,7 @@ export const data : ProjectType[] = [
         buildDate: 'November 2022',
         summary: 'My first project using the React.js and Redux libraries. This Front-End application accesses the Reddit database through the JSON API, filters and formats the results before displaying them in formats that are optimised depending on viewport.',
         technologies: [
-            'JavaScript', 'React.js', 'Redux.js', 'Router', 'API', 'JSON', 'CSS', 'Git', 'GitHub'
+            'JavaScript', 'React.js', 'Redux.js', 'Router', 'CSS', 'Git', 'GitHub'
         ]
     },
     {
@@ -74,7 +74,7 @@ export const data : ProjectType[] = [
         repo: 'https://github.com/JakeyBlee/JakeyBlee.github.io',
         image: 'portv1.png',
         buildDate: 'September 2022',
-        summary: 'My first project and the first iteration of my portfolio website. Built using HTML5 and CSS3, with some basic ES6 JavaScript for simple interation. Utilises responsive design for varying viewport sizes.',
+        summary: 'My first project and the first iteration of my portfolio website. Built using HTML5 and CSS3, with some basic ES6 JavaScript for simple interaction. Utilises responsive design for varying viewport sizes.',
         technologies: [
             'HTML', 'CSS', 'JavaScript', 'Functions', 'Formatting', 'DOM', 'Git', 'GitHub'
         ]

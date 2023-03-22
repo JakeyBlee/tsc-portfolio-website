@@ -1,10 +1,11 @@
 .workplaceCard{
     width: 70vw;
     padding-bottom: 50px;
+    padding-right: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     & +.workplaceCard {
         @include themed('border-top-color', 'text-color');
         border-top: 2px solid;
@@ -12,7 +13,6 @@
     }
     
     .jobTitle {
-        text-align: center;
         font-size: 28px;
         padding-bottom: 10px;
     }
@@ -28,7 +28,7 @@
         margin-bottom: 1rem;
         @include themed('border-color', 'feature-border');
         border: 2px solid;
-        border-radius: 1rem;
+        border-radius: 10px;
         overflow: hidden;
         .skillContainer {
             @include themed('background-color', 'feature');
@@ -62,18 +62,28 @@
         p {
             padding-bottom: 1rem;
         }
-    }   
-    .showMore {
-        font-size: 20px;
-        font-weight: 700;
-        width: 250px;
-        text-align: center;
-        padding-top: 2vw;
-        transition: all 0.1s linear;
-        &:hover{
-            cursor: pointer;
-            @include themed('color', 'nav-color');
-            transform: scale(1.2);
+    }
+    .buttonContainer {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        button {
+            @include themed('color', 'text-color');
+        }
+        .showMore {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 100px;
+        border-radius: 50px;
+        border-width: 3px;
+        @include themed('background-color', 'feature');
+        &:hover {
+                cursor: pointer;
+                @include themed('filter', 'themed-hover-filter');
+            }
         }
     }
 }

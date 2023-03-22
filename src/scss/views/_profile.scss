@@ -1,12 +1,11 @@
 .profile{
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     grid-template: repeat(2, fit-content) / 1fr 3fr;
     .title {
         @include themed('color', 'text-color');
         font-size: 40px;
-        text-align: center;
         padding-bottom: 20px;
         grid-area: 1 / 1 / 2 / 2;
     }

@@ -1,11 +1,16 @@
 .result {
     width: 100%;
     padding-top: 20px;
+    margin-bottom: 30px;
     display: grid;
     grid-template: repeat(3, fit-content) / fit-content fit-content;
     @include themed('color', 'text-color');
+    &+.result {
+        border-top: 0.5px white solid;
+    }
     h4{
         font-size: 24px;
+        font-weight: 500;
         grid-area: 1 / 1 / 2 / 2;
     }
     .textArea{

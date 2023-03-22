@@ -27,7 +27,7 @@ export const Projects = () => {
             dragDirectionLock
             dragSnapToOrigin={true}
             onDrag={handleDrag}>
-                <h2 className="title">Previous Projects</h2>
+                <h2 className="title">Past Projects</h2>
                 <motion.div className='projectContainer'
                 initial={{ y: -200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

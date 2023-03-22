@@ -18,9 +18,9 @@ export const Header = () => {
             </div>
 
             {/* Theme Button */}
-            <div className='themeSlider'>
+            <button className='themeSlider'>
                 <img alt='theme slider' onClick={handleTheme} src={require("../../resources/media/themeslider.png")}/>
-            </div>
+            </button>
         </header>
     )
 }

@@ -76,10 +76,11 @@ export const Workplace = (props : {data: Employment}) => {
             
             </motion.div>
             </AnimatePresence>
-
-            <div className='showMore' onClick={handleClick}>
-               <p>&#60;Show {moreInfo ? 'Less' : 'More'} /&#62;</p>
-            </div>            
+            <div className='buttonContainer'>
+                <button className='showMore' onClick={handleClick}>
+                Show {moreInfo ? 'Less' : 'More'}
+                </button>   
+            </div>
         </div>
     )
 }

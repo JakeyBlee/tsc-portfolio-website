@@ -2,14 +2,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     grid-template: 1fr / fit-content;
     .filterButtons {
         display: flex;
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
         padding-bottom: 30px;
         transition: all 0.5s ease-in-out;
+        button {
+            @include themed('color', 'background-color');
+        }
         .filter {
             display: flex;
             justify-content: center;
@@ -19,7 +22,7 @@
             margin-right: 10px;
             border-radius: 50px;
             border-width: 3px;
-            @include themed('background-color', 'nav-color');
+            @include themed('background-color', 'button-color');
             &:hover {
                 cursor: pointer;
                 @include themed('filter', 'themed-hover-filter');
@@ -46,7 +49,7 @@
         }
         & +.section {
             @include themed('border-top-color', 'text-color');
-            border-top: 2px solid;
+            border-top: 5px double;
             padding-top: 30px;
         }
     }

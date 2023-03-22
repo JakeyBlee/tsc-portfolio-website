@@ -8,14 +8,14 @@ export const Project = (props: {data: ProjectType}) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            const temp = techList[techList.length-1];
-            techList.pop();
+            const temp = techList[0];
+            techList.shift();
             changeTechs([...techList]);
             setTimeout(() => {
-                techList.unshift(temp);
+                techList.push(temp);
                 changeTechs([...techList]);
-            }, 2000);
-        }, 1000);
+            }, 3000);
+        }, 1500);
         return () => clearInterval(interval);
     }, []);
     
@@ -28,17 +28,8 @@ export const Project = (props: {data: ProjectType}) => {
                     <p>{props.data.buildDate}</p>
                 </div>
             </div>
-            <div className="siteAndTech">
             <div className="siteLink">
                 <img alt="Website Preview" src={require(`../../resources/media/${props.data.image}`)} />
-                <div className="linkContainer">
-                    {props.data.liveSite &&
-                    <a href={props.data.liveSite} target="_blank" className="siteText">See Live Site</a>}
-                    {props.data.repo &&
-                    <a href={props.data.repo} target="_blank" className="repoText">See Code Repo</a>}
-                    {(props.data.progress === 'future' || props.data.progress === 'current') && 
-                    <p className="siteText">In Development</p>}
-                </div>
             </div>
             <div className="techWindow">
                 <div className="techContainer">
@@ -49,19 +40,25 @@ export const Project = (props: {data: ProjectType}) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ease: 'linear', duration: 1, opacity: {duration: 0.5}}}
+                        transition={{ease: 'linear', duration: 1.5, opacity: {duration: 0.5}}}
                         key={tech}
                         className='tech'>{tech}</motion.p>
                     ))}
                     </AnimatePresence>
                 </div>
             </div>
-            </div>
-
             <div className="projectText">
+                <h5>Description:</h5>
                 <p>{props.data.summary}</p>
             </div>
-            
+            {(props.data.progress === 'past') &&
+            <div className="buttonContainer">
+                {props.data.liveSite &&
+                <button className="link" onClick={()=>window.open(props.data.liveSite,'_blank')}>See Live Site</button>}
+                {props.data.repo &&
+                <button className="link" onClick={()=>window.open(props.data.repo,'_blank')}>See Code Repo</button>}
+            </div>
+            }
         </div>
     )
 }

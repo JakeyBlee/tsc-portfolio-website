@@ -1,19 +1,18 @@
 .projects{
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: space-between;
     grid-template: repeat(2, fit-content) / 1fr 3fr;
     .title {
         @include themed('color', 'text-color');
         font-size: 40px;
-        text-align: center;
         padding-bottom: 30px;
         grid-area: 1 / 1 / 2 / 2;
     }
     .projectContainer {
         @include themed('color', 'text-color');
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 }

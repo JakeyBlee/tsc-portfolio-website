@@ -1,11 +1,10 @@
 .employment{
     display: grid;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     grid-template: 1fr / fit-content;
     .title {
         @include themed('color', 'text-color');
-        text-align: center;
         font-size: 40px;
         padding-bottom: 20px;
         grid-area: 1 / 1 / 2 / 2;
