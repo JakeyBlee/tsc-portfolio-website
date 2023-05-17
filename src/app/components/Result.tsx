@@ -19,6 +19,12 @@ export const Result = (props: {data: Qualification}) => {
                 <p>{props.data.summary}</p>
             </div>
             <img src={require(`../../resources/media/${props.data.image}`)} />
+            {props.data.certificate && <div className='buttonContainer'>
+                <a href={require(`../../resources/certificates/`+props.data.certificate)} target="_blank">
+                <button className='viewCert'>View Certificate
+                </button>
+                </a>
+            </div>}
         </div>
     )
 }

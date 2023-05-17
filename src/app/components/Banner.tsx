@@ -44,6 +44,7 @@ export const Banner = () => {
                 <h3>Doctor turned Developer
                 <br/>Based in Essex, GB</h3>
             </motion.div>
+        <div id="anchor"></div>
         </motion.section>
     )
 }

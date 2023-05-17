@@ -1,5 +1,5 @@
 export interface Qualification{
-    type: 'degree' | 'cert' | 'other',
+    type: 'degree' | 'cert' | 'course' | 'other',
     title: string,
     organization: string,
     image: string,
@@ -24,6 +24,15 @@ export const data : Qualification[] = [
         image: 'cardiff.png',
         date: 'July 2017',
         summary: "Single year intercalated bachelor's degree in Medical Education."
+    },
+    {
+        type: 'cert',
+        title: 'IBM Full Stack Software Developer',
+        organization: 'Coursera',
+        image: 'coursera.png',
+        date: 'May 2023',
+        summary: 'This cerfication comprises of 12 online courses covering various Application Development and Cloud technologies. Topics include HTML, CSS, JavaScript, GitHub, Node.js, React, Cloud Native practices, DevOps, CI/CD, Containers, Docker, Kubernetes, OpenShift, Python programming, Databases, SQL, NoSQL, Django ORM, Bootstrap, Application Security, Microservices, Serverless computing, and more.',
+        certificate: 'ibm.pdf'
     },
     {
         type: 'cert',

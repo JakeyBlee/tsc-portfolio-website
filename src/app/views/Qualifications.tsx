@@ -56,7 +56,7 @@ export const Qualifications = () => {
                 initial={{ y: -200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 200, opacity: 0 }}>
-                    <h3>Course Certificates</h3>
+                    <h3>Professional Certificates</h3>
                     {data.flatMap(data => data.type === 'cert' && (
                         <Result data={data} key={data.title}/>
                     )) }

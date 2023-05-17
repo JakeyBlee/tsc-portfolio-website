@@ -10,7 +10,9 @@ export const App = () => {
   const [page, setPage] = useState('profile');
   const navigate = useNavigate();
   const updatePage = (target : string) : void => {
+    document.getElementById("anchor")?.scrollIntoView({ behavior: 'smooth' });
     setPage(target);
+    document.getElementById("anchor")?.scrollIntoView({ behavior: 'smooth' });
   }
   useEffect(() => {
     if(page === 'profile'){
