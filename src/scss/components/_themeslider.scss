@@ -1,0 +1,92 @@
+.themeSlider {
+    height: 40px;
+    width: 90px;
+    margin: 10px;
+    background-color: var(--slider-background);
+    transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
+    border: 2px rgb(90, 90, 90) solid;
+    border-radius: 999px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    &:hover{
+        cursor: pointer;
+        filter: var(--themed-hover-filter);
+    }
+    .dark, .light {
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        width: 60%;
+        font-weight: 500;
+    }
+    .dark{
+        left: 0;
+        color: white;
+        opacity: var(--hidden-in-light);
+        transition: opacity 0.5s ease-in-out;
+    }
+    .light{
+        right: 0;
+        color:rgb(15, 15, 15);
+    }
+    .slider{
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: var(--slider-position);
+        margin: auto;
+        transition: left 0.5s ease-in-out, background-color 0.5s ease-in-out;
+        height: 70%;
+        aspect-ratio: 1/1;
+        background-color: var(--slider-color);
+        border-radius: 50%;
+        overflow: hidden;
+        .shading{
+            position: absolute;
+            background-color: var(--slider-color);
+            transition: background-color 0.5s ease-in-out;
+            filter: brightness(115%) blur(2px);
+            height: 66%;
+            width: 66%;
+            border-radius: 50%;
+        }
+        .shadow{
+            position: absolute;
+            right: var(--shadow-x);
+            bottom: var(--shadow-y);
+            transition: right 1s ease-in-out, bottom 1s ease-in-out, background-color 0.5s ease-in-out;
+            background-color: var(--background);
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    .cloud1, .cloud2{
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        bottom: var(--cloud-y);
+        filter: blur(1px);
+        transition: bottom 0.5s ease-in-out;
+    }
+    .cloud1{
+        height: 35px;
+        width: 45px;
+        left: 55px;
+    }
+    .cloud2{
+        height: 22px;
+        width: 35px;
+        left: 40px;
+        transition-delay: 150ms;
+    }
+}

@@ -6,21 +6,24 @@
     justify-content: center;
     top: 50px;
     z-index: 1;
-    @include themed('background-color', 'background');
+    background-color: var(--background);
+    transition: background-color 0.5s ease-in-out;
     &::after {
         content: " ";
         position: absolute;
         bottom: 0;
         width: 100vw;
         border-bottom: 2px solid;
-        @include themed('border-color', 'view-background');
+        border-color: var(--view-background);
+        transition: border-color 0.5s ease-in-out;
     }
     .navLinks {
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        @include themed('color', 'nav-color');
+        color: var(--nav-color);
+        transition: color 0.5s ease-in-out;
         .navLink {
             font-size: 18px;
             width: 250px;
@@ -33,11 +36,13 @@
             transition: all 0.3s linear;
             &:hover{
                 cursor: pointer;
-                @include themed('filter', 'themed-hover-filter');
+                filter: var(--themed-hover-filter);
+                transition: filter 0.5s ease-in-out;
             }
         }
         .active {
-            @include themed('color', 'nav-active-color');
+            color: var(--nav-active-color);
+            transition: color 0.5s ease-in-out;
             font-weight: 700;
         }
     }

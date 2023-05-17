@@ -7,7 +7,8 @@
     flex-direction: column;
     align-items: flex-start;
     & +.workplaceCard {
-        @include themed('border-top-color', 'text-color');
+        border-top-color: var(--text-color);
+        transition: border-top-color 0.5s ease-in-out;
         border-top: 2px solid;
         padding-top: 30px;
     }
@@ -26,12 +27,14 @@
         display: flex;
         align-items: center;
         margin-bottom: 1rem;
-        @include themed('border-color', 'feature-border');
+        border-color: var(--feature-border);
+        transition: border-color 0.5s ease-in-out;
         border: 2px solid;
         border-radius: 10px;
         overflow: hidden;
         .skillContainer {
-            @include themed('background-color', 'feature');
+            background-color: var(--feature);
+            transition: background-color 0.5s ease-in-out;
             display: flex;
             height: 100%;
             align-items: center;
@@ -68,21 +71,21 @@
         margin-top: 20px;
         display: flex;
         justify-content: center;
-        button {
-            @include themed('color', 'text-color');
-        }
         .showMore {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 30px;
-        width: 100px;
-        border-radius: 50px;
-        border-width: 3px;
-        @include themed('background-color', 'feature');
-        &:hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 100px;
+            border-radius: 50px;
+            border-width: 3px;
+            color: var(--text-color);
+            background-color: var(--feature);
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            &:hover {
                 cursor: pointer;
-                @include themed('filter', 'themed-hover-filter');
+                filter: var(--themed-hover-filter);
+                transition: filter 0.5s ease-in-out;
             }
         }
     }

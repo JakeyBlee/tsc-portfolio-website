@@ -4,7 +4,8 @@
     margin-bottom: 30px;
     display: grid;
     grid-template: repeat(3, fit-content) / fit-content fit-content;
-    @include themed('color', 'text-color');
+    color: var(--text-color);
+    transition: color 0.5s ease-in-out;
     &+.result {
         border-top: 0.5px white solid;
     }

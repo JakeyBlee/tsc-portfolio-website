@@ -6,7 +6,8 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    @include themed('background-color', 'background');
+    background-color: var(--background);
+    transition: background-color 0.5s ease-in-out;
     .pageInfo {
         height: inherit;
         display: flex;
@@ -17,35 +18,17 @@
             height: 50px;
             margin: 5px;
             border: 2px solid;
-            @include themed('border-color', 'text-color');
+            border-color: var(--text-color);
+            transition: border-color 0.5s ease-in-out;
             border-radius: 999px;
         };
         .siteName {
-            @include themed('color', 'text-color');
+            color: var(--text-color);
+            transition: color 0.5s ease-in-out;
             font-size: 22px;
             margin: 10px;
         };
     };
-    .themeSlider {
-        height: 40px;
-        width: 90px;
-        margin: 10px;
-        border: 2px rgb(90, 90, 90) solid;
-        border-radius: 999px;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        &:hover{
-            cursor: pointer;
-            @include themed('filter', 'themed-hover-filter');
-        }
-        img {
-            height: inherit;
-            border: inherit;
-            position: relative;
-            @include themed('right', 'theme-img-offset');
-        }
-    }
 }
 
 @media only screen and (max-width:400px){

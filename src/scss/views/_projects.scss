@@ -4,13 +4,15 @@
     align-items: space-between;
     grid-template: repeat(2, fit-content) / 1fr 3fr;
     .title {
-        @include themed('color', 'text-color');
+        color: var(--text-color);
+        transition: color 0.5s ease-in-out;
         font-size: 40px;
         padding-bottom: 30px;
         grid-area: 1 / 1 / 2 / 2;
     }
     .projectContainer {
-        @include themed('color', 'text-color');
+        color: var(--text-color);
+        transition: color 0.5s ease-in-out;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;

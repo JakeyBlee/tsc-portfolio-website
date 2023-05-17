@@ -16,7 +16,7 @@ export const Projects = () => {
             setPage('qualifications');
         }
     }
-    
+
     return(
         <AnimatePresence>
             {isVisible && <motion.div className="view projects"

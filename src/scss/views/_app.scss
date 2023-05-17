@@ -1,6 +1,5 @@
 #app{
   min-height: 100vh;
-  
 }
 
 .viewBackground{
@@ -11,7 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include themed('background-color', 'view-background');
+  background-color: var(--view-background);
+  transition: background-color 0.5s ease-in-out;
   .view{
     width: 80%;
     margin: 30px 0;
@@ -19,7 +19,8 @@
     padding-top: 3vw;
     padding-bottom: 0;
     border-radius: 10px;
-    @include themed('background-color', 'background');
+    background-color: var(--background);
+    transition: background-color 0.5s ease-in-out;
   }
 }
 
@@ -35,7 +36,8 @@
       margin-top: 10px;
       font-size: 12px;
       font-weight: 700;
-      @include themed('color', 'text-color');
+      color: var(--text-color);
+      transition: color 0.5s ease-in-out;
     }
   }
 }

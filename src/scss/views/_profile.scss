@@ -4,7 +4,8 @@
     align-items: flex-start;
     grid-template: repeat(2, fit-content) / 1fr 3fr;
     .title {
-        @include themed('color', 'text-color');
+        color: var(--text-color);
+        transition: color 0.5s ease-in-out;
         font-size: 40px;
         padding-bottom: 20px;
         grid-area: 1 / 1 / 2 / 2;
@@ -17,10 +18,12 @@
         margin-left: 5vw;
         border-radius: 50%;
         grid-area: 2 / 2 / 3 / 3;
-        @include themed('background-color', 'text-color');
+        background-color: var(--text-color);
+        transition: background-color 0.5s ease-in-out;
     }
     .textArea {
-        @include themed('color', 'text-color');
+        color: var(--text-color);
+        transition: color 0.5s ease-in-out;
         max-width: 750px;
         grid-area: 2 / 1 / 3 / 2;
         padding-bottom: 5vw;
