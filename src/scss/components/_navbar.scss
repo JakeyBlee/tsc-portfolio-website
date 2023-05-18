@@ -7,7 +7,7 @@
     top: 50px;
     z-index: 1;
     background-color: var(--background);
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, filter 0.5s ease-in-out;
     &::after {
         content: " ";
         position: absolute;
@@ -23,7 +23,6 @@
         align-items: center;
         justify-content: space-evenly;
         color: var(--nav-color);
-        transition: color 0.5s ease-in-out;
         .navLink {
             font-size: 18px;
             width: 250px;
@@ -34,11 +33,6 @@
             padding: 0.5vw;
             white-space: nowrap;
             transition: all 0.3s linear;
-            &:hover{
-                cursor: pointer;
-                filter: var(--themed-hover-filter);
-                transition: filter 0.5s ease-in-out;
-            }
         }
         .active {
             color: var(--nav-active-color);
@@ -71,3 +65,16 @@
         }
     }
 }
+
+@media (hover: hover){
+    .navbar {
+        .navLinks {
+            .navLink {
+                &:hover{
+                    cursor: pointer;
+                    filter: var(--themed-hover-filter);
+                }
+            }
+        }
+    }
+};

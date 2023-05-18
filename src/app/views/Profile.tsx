@@ -31,16 +31,16 @@ export const Profile = () => {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 200, opacity: 0 }}>
                     <p className='text'>Hello, my name is <span>Jacob Blackburn!</span></p>
-                    <p className='text'>I am an <span>NHS doctor</span> with around four years front-line experience in a wide range of medical and surgical fields spanning both primary and secondary care. Despite this background, my main passion and personal interests lie in <span>technology</span> and I have often found myself wondering whether I would be instead better suited to a career within this industry.</p>
-                    <p className='text'>Recent events have allowed me to explore this possibility and over the past year I have been retraining myself in <span>Full-Stack Software Development</span>, completing a number of projects detailed below. I am looking for a Junior Software Development role in mainly <span>JavaScript/TypeScript</span>, with an ideal target sector of HealthTech so that my medical background could be of greater value.</p>
+                    <p className='text'>I am an <span>NHS doctor</span> with around four years front-line experience in a wide range of medical and surgical fields spanning both primary and secondary care. Despite this background, my main passion and personal interests lie in <span>technology</span> and <span>software development</span>.</p>
+                    <p className='text'>Over the past few years I have been exploring the possibility of an alternate career in <span>Full-Stack Software Development</span> and have completed a number of projects detailed in the <span className='code'>&#60;Projects /&#62;</span> section of this site. My primary language is <span>JavaScript</span> or <span>TypeScript</span>, but I also have experience with <span>Python</span>. My ideal employment sector would be HealthTech so that my medical background could be of greater value.</p>
                     <p className='text'>Read more about my past work in the <span className='code'>&#60;Employment /&#62;</span> section above. My experience levels for different technologies are listed in the <span className='code'>&#60;Qualifications /&#62;</span> section linked above, but I would be more than happy to learn new skills or stacks for potential jobs if given the opportunity.</p>
-                </motion.div>
-                <img className="desktop" src={require("../../resources/media/profile.png")} alt="Jacob Blackburn"/>
                 <div className='buttonContainer'>
                     <a href={require(`../../resources/docs/cv.pdf`)} target="_blank">
                         <button className='viewCv'>View CV</button>
                     </a>
                 </div>
+                </motion.div>
+                <img className="desktop" src={require("../../resources/media/profile.png")} alt="Jacob Blackburn"/>
             </motion.div>}
         </AnimatePresence>
     )

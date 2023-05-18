@@ -9,6 +9,7 @@ export const Workplace = (props : {data: Employment}) => {
 
     const handleClick = () : void => {
         setMoreInfo(!moreInfo);
+        document.getElementById(props.data.image)?.scrollIntoView({ behavior: 'smooth' });
     }
 
     useEffect(() => {
@@ -26,6 +27,7 @@ export const Workplace = (props : {data: Employment}) => {
 
     return (
         <div className="workplaceCard">
+            <div className="anchor" id={props.data.image}/>
             <h3 className="jobTitle">{props.data.organization}<br/>{props.data.title}</h3>
             <p className="jobDates">{props.data.dateFrom} → {props.data.dateTo}</p>
             <div className="skillsWindow">

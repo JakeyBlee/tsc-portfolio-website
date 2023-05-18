@@ -13,7 +13,10 @@
         border-top: 2px solid;
         padding-top: 30px;
     }
-    
+    .anchor {
+        position: relative;
+        top: -120px;
+    }
     .jobTitle {
         width: calc(100% - 170px);
         font-size: 28px;
@@ -79,16 +82,10 @@
             align-items: center;
             height: 30px;
             width: 100px;
-            border-radius: 50px;
-            border-width: 3px;
+            border-radius: 5px;
             color: var(--text-color);
             background-color: var(--feature);
-            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-            &:hover {
-                cursor: pointer;
-                filter: var(--themed-hover-filter);
-                transition: filter 0.5s ease-in-out;
-            }
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, filter 0.5s ease-in-out;
         }
     }
 }
@@ -136,5 +133,18 @@
     }
     .showMore p {
         font-size: 16px;
+    }
+}
+
+@media (hover: hover){
+    .workplaceCard {
+        .buttonContainer {
+            .showMore {
+                &:hover {
+                    cursor: pointer;
+                    filter: var(--themed-hover-filter);
+                }
+            }
+        }
     }
 }
