@@ -81,8 +81,8 @@
         background-size: auto;
         align-items: center;
         text-align: center;
-        transition: background-image 0.5s ease-in-out;
         color: var(--text-color);
+        transition: background-image 0.5s ease-in-out, color 0.5s ease-in-out;
         .hello {
             h3 {
             font-size: 1.2rem;
