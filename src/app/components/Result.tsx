@@ -3,8 +3,8 @@ import { Qualification } from "../../resources/data/qualifications"
 export const Result = (props: {data: Qualification}) => {
     return(
         <div className="result">
-            <h4>{props.data.title}</h4>
             <div className="textArea">
+            <h4>{props.data.title}</h4>
                 <div className="origin">
                     <h5>From: </h5>
                     <p>{props.data.organization}</p>
@@ -20,9 +20,8 @@ export const Result = (props: {data: Qualification}) => {
             </div>
             <img src={require(`../../resources/media/${props.data.image}`)} />
             {props.data.certificate && <div className='buttonContainer'>
-                <a href={require(`../../resources/certificates/`+props.data.certificate)} target="_blank">
-                <button className='viewCert'>View Certificate
-                </button>
+                <a href={require(`../../resources/docs/`+props.data.certificate)} target="_blank">
+                    <button className='viewCert'>View Certificate</button>
                 </a>
             </div>}
         </div>

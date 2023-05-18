@@ -27,7 +27,7 @@ export const data : Qualification[] = [
     },
     {
         type: 'cert',
-        title: 'IBM Full Stack Software Developer',
+        title: 'IBM Full Stack Developer',
         organization: 'Coursera',
         image: 'coursera.png',
         date: 'May 2023',

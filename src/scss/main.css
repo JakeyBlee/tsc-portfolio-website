@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
 .light-theme {
+  --mobile-background: url("/src/resources/media/bannermoblight.png");
   --background: #e6e6e6;
   --view-background: #a8a5a0;
   --feature: #ffffff;
@@ -23,6 +24,7 @@
 }
 
 .dark-theme {
+  --mobile-background: url("/src/resources/media/bannermobdark.png");
   --background: rgb(15, 15, 15);
   --view-background: rgb(53, 53, 53);
   --feature: rgb(45, 45, 45);
@@ -200,8 +202,9 @@
   margin-left: 10rem;
 }
 .banner img.mobile {
-  background-color: var(--background);
-  transition: background-color 0.5s ease-in-out;
+  background-color: var(--text-color);
+  filter: drop-shadow(0 0 20px var(--text-color));
+  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
   padding: 10px;
   border-radius: 50%;
   display: none;
@@ -242,11 +245,13 @@
 }
 @media only screen and (max-width: 1000px) {
   .banner {
-    background-image: url("/src/resources/media/bannermob.png");
+    background-image: var(--mobile-background);
     background-position: left;
     background-size: auto;
     align-items: center;
     text-align: center;
+    transition: background-image 0.5s ease-in-out;
+    color: var(--text-color);
   }
   .banner .hello h3 {
     font-size: 1.2rem;
@@ -276,7 +281,7 @@
     display: block;
     width: 13rem;
     height: 13rem;
-    padding: 8px;
+    padding: 5px;
   }
   .banner .based {
     margin: 0 0 3rem 0;
@@ -428,13 +433,49 @@
 .profile .textArea .text .code {
   white-space: nowrap;
 }
+.profile .buttonContainer {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  grid-area: 2/2/3/3;
+  position: relative;
+  margin-left: 5vw;
+  top: 300px;
+}
+.profile .buttonContainer .viewCv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  border-width: 3px;
+  color: var(--text-color);
+  background-color: var(--feature);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.profile .buttonContainer .viewCv:hover {
+  cursor: pointer;
+  filter: var(--themed-hover-filter);
+  transition: filter 0.5s ease-in-out;
+}
 
 @media only screen and (max-width: 1200px) {
   .profile .desktop {
     display: none;
   }
+  .profile .textArea {
+    padding-bottom: 0;
+  }
   .profile .text {
     grid-area: 2/1/3/2;
+  }
+  .profile .buttonContainer {
+    grid-area: 3/1/4/2;
+    padding-bottom: 2vw;
+    margin-left: 0;
+    top: 0;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -471,6 +512,7 @@
 }
 .workplaceCard {
   width: 70vw;
+  position: relative;
   padding-bottom: 50px;
   padding-right: 20px;
   overflow: hidden;
@@ -485,6 +527,7 @@
   padding-top: 30px;
 }
 .workplaceCard .jobTitle {
+  width: calc(100% - 170px);
   font-size: 28px;
   padding-bottom: 10px;
 }
@@ -493,7 +536,7 @@
   font-size: 20px;
 }
 .workplaceCard .skillsWindow {
-  width: 100%;
+  width: calc(100% - 200px);
   height: 2rem;
   display: flex;
   align-items: center;
@@ -524,11 +567,11 @@
   padding-right: 10px;
   padding-left: 10px;
 }
-.workplaceCard .intro {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1rem;
+.workplaceCard img {
+  width: 170px;
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
 }
 .workplaceCard .jobText {
   display: flex;
@@ -562,6 +605,18 @@
   transition: filter 0.5s ease-in-out;
 }
 
+@media only screen and (max-width: 1050px) {
+  .workplaceCard .skillsWindow {
+    width: 100%;
+  }
+  .workplaceCard .jobTitle {
+    width: calc(100% - 100px);
+  }
+  .workplaceCard img {
+    width: 100px;
+    right: 20px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .workplaceCard {
     width: 85vw;
@@ -572,6 +627,16 @@
   }
   .workplaceCard .jobDates {
     font-size: 16px;
+  }
+  .workplaceCard .skillsWindow {
+    width: 100%;
+  }
+  .workplaceCard .jobTitle {
+    width: calc(100% - 85px);
+  }
+  .workplaceCard img {
+    width: 80px;
+    right: 20px;
   }
   .jobText p, .intro p {
     font-size: 14px;
@@ -658,27 +723,22 @@
 }
 .result {
   width: 100%;
+  position: relative;
   padding-top: 20px;
   margin-bottom: 30px;
-  display: grid;
-  grid-template: repeat(3, fit-content)/fit-content fit-content;
   color: var(--text-color);
   transition: color 0.5s ease-in-out;
 }
 .result + .result {
   border-top: 0.5px white solid;
 }
+.result .textArea {
+  width: calc(100% - 100px);
+}
 .result h4 {
   font-size: 24px;
   font-weight: 500;
-  grid-area: 1/1/2/2;
   padding-bottom: 10px;
-}
-.result .textArea {
-  grid-area: 2/1/3/2;
-}
-.result .description {
-  grid-area: 3/1/4/3;
 }
 .result .origin, .result .date {
   display: flex;
@@ -689,10 +749,11 @@
   padding-right: 5px;
 }
 .result img {
-  height: 100px;
-  display: flex;
-  justify-self: flex-end;
-  grid-area: 1/2/3/3;
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  border-radius: 5px;
 }
 .result .buttonContainer {
   width: 100%;
@@ -700,7 +761,6 @@
   display: flex;
   justify-content: center;
   white-space: nowrap;
-  grid-area: 4/1/5/3;
 }
 .result .buttonContainer .viewCert {
   display: flex;
@@ -725,7 +785,7 @@
     padding-bottom: 5px;
   }
   .result .textArea {
-    grid-area: 2/1/3/3;
+    width: calc(100% - 90px);
   }
   .result .textArea, .result .description {
     font-size: 14px;
@@ -734,9 +794,7 @@
     padding-bottom: 0.5rem;
   }
   .result img {
-    height: 50px;
-    padding-top: 5px;
-    grid-area: 1/1/3/3;
+    width: 80px;
   }
 }
 .projects {

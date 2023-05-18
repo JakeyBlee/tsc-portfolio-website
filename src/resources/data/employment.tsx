@@ -4,16 +4,28 @@ export interface Employment{
     dateFrom: string,
     dateTo: string,
     summary : string,
-    description: string[],
-    skills: string[]
+    description?: string[],
+    skills: string[],
+    image: string
 };
 
 export const data : Employment[] = [
     {
-        title: 'Trainee Full Stack Developer',
+        title: 'Software Developer',
+        organization: 'GoodGrowth',
+        dateFrom: 'June 2023',
+        dateTo: 'Current',
+        summary: 'Working with the Development team based in Birmingham, I help to innovate and build world-class customer journeys on legacy systems at breakneck speed. Serving a multitude of global brands, we turn digital failure into commercial success. We capture growth using data science, insight and creativity.',
+        skills: [
+            'JavaScript', 'TypeScript', 'React.js', 'Cascading Style Sheets (CSS)', 'SASS', 'Teamwork', 'Leadership', 'Communication', 'Git', 'GitHub', 'E-Commerce', 'Innovation', 'Analytics'
+        ],
+        image: 'goodgrowth.png'
+    },
+    {
+        title: 'Trainee Developer',
         organization: 'Self-Employed',
         dateFrom: 'July 2022',
-        dateTo: 'Current',
+        dateTo: 'May 2023',
         summary: '0-1 years experience in a variety of Full Stack technologies, mainly focussed around the PERN stack. Throughout this time I have worked on front end projects such as portfolio websites and mock social media browsers, to full stack deployments of cloud hosted e-commerce applications. I have worked with SQL, Node.js, Express.js, React.js, and have (limited) experience with AWS cloud services.',
         description:[
             `Though not strictly employment, over the past 8 months I have been reliably dedicating three full days per week developing my own skillset in software development, investing more time in this endeavour than in my paid employment.`,
@@ -26,13 +38,14 @@ export const data : Employment[] = [
             ],
         skills: [
             'JavaScript', 'TypeScript', 'React.js', 'Redux.js', 'Node.js', 'Express.js', 'Cascading Style Sheets (CSS)', 'SASS', 'SQL', 'PostgreSQL', 'Amazon Web Services (AWS)', 'Git', 'GitHub'
-        ]
+        ],
+        image: 'self-employed.png'
     },
     {
         title: 'Medical Doctor',
         organization: 'NHS England',
-        dateFrom: 'August 2019',
-        dateTo: 'Current',
+        dateFrom: 'Aug 2019',
+        dateTo: 'May 2023',
         summary: '3+ years professional experience working as a medical doctor in a variety of roles within the NHS. These roles span both primary (community) medicine and secondary (hospital) placements. I have worked in Renal Medicine, General and Orthopaedic surgery, Paediatrics and General Practice. I have spent much of this time in large, diverse teams and once senior acted as a mentor to more junior colleagues.',
         description:[
             `Since graduating Cardiff Medical School I have worked at Broomfield Hospital in a variety of medical and surgical specialties. During my first two years I was a Foundation Trainee rotating through Renal Medicine, General Surgery, General Practice, Orthopaedics and Paediatrics, but during the COVID pandemic was often required to give support wherever needed.`,
@@ -41,6 +54,8 @@ export const data : Employment[] = [
             `Over the past year I have reduced my hospital working hours to two days per week so that I could focus on training myself in Software Development.`
             ],
         skills: [
-            'Tutoring', 'Empathy', 'Professionalism', 'Compassion', 'Perserverance', 'Communication', 'Teamwork', 'Team Leadership', 'Analytical Skills', 'Problem Solving', 'Time Management']
+            'Tutoring', 'Empathy', 'Professionalism', 'Compassion', 'Perserverance', 'Communication', 'Teamwork', 'Team Leadership', 'Analytical Skills', 'Problem Solving', 'Time Management'
+        ],
+        image: 'nhs.png'
     },
 ];

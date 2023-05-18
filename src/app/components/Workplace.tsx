@@ -26,7 +26,7 @@ export const Workplace = (props : {data: Employment}) => {
 
     return (
         <div className="workplaceCard">
-            <h3 className="jobTitle">{ props.data.title }</h3>
+            <h3 className="jobTitle">{props.data.organization}<br/>{props.data.title}</h3>
             <p className="jobDates">{props.data.dateFrom} → {props.data.dateTo}</p>
             <div className="skillsWindow">
                 <div className="skillContainer">
@@ -44,23 +44,12 @@ export const Workplace = (props : {data: Employment}) => {
                     </AnimatePresence>
                 </div>
             </div>
-            
-            <div className="intro">
-                <div>
-                    <h4>Job Title:</h4>
-                    <p>{props.data.title}</p>
-                </div>
-                <div>
-                    <h4>Organization:</h4>
-                    <p>{props.data.organization}</p>
-                </div>
-            </div>
 
             <AnimatePresence mode="popLayout">
             <motion.div className="jobText" style={{transition: "none"}}>
                 
                 <h4>Description:</h4>
-                {moreInfo && props.data.description.map(paragraph => (
+                {moreInfo && props.data.description?.map(paragraph => (
                     <motion.p className='text' key={paragraph}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -76,11 +65,12 @@ export const Workplace = (props : {data: Employment}) => {
             
             </motion.div>
             </AnimatePresence>
-            <div className='buttonContainer'>
+            <img src={require(`../../resources/media/${props.data.image}`)} />
+            {props.data.description && <div className='buttonContainer'>
                 <button className='showMore' onClick={handleClick}>
                 Show {moreInfo ? 'Less' : 'More'}
                 </button>   
-            </div>
+            </div>}
         </div>
     )
 }

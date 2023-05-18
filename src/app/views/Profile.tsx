@@ -36,6 +36,11 @@ export const Profile = () => {
                     <p className='text'>Read more about my past work in the <span className='code'>&#60;Employment /&#62;</span> section above. My experience levels for different technologies are listed in the <span className='code'>&#60;Qualifications /&#62;</span> section linked above, but I would be more than happy to learn new skills or stacks for potential jobs if given the opportunity.</p>
                 </motion.div>
                 <img className="desktop" src={require("../../resources/media/profile.png")} alt="Jacob Blackburn"/>
+                <div className='buttonContainer'>
+                    <a href={require(`../../resources/docs/cv.pdf`)} target="_blank">
+                        <button className='viewCv'>View CV</button>
+                    </a>
+                </div>
             </motion.div>}
         </AnimatePresence>
     )

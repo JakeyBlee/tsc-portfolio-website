@@ -37,6 +37,33 @@
             }
         }
     }
+    .buttonContainer {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+        grid-area: 2 / 2 / 3 / 3;
+        position: relative;
+        margin-left: 5vw;
+        top: 300px;
+        .viewCv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 30px;
+            border-radius: 50px;
+            border-width: 3px;
+            color: var(--text-color);
+            background-color: var(--feature);
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            &:hover {
+                cursor: pointer;
+                filter: var(--themed-hover-filter);
+                transition: filter 0.5s ease-in-out;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:1200px){
@@ -44,8 +71,17 @@
         .desktop {
             display: none;
         }
+        .textArea{
+            padding-bottom: 0;
+        }
         .text {
             grid-area: 2 / 1 / 3 / 2;
+        }
+        .buttonContainer {
+            grid-area: 3 / 1 / 4 / 2;
+            padding-bottom: 2vw;
+            margin-left: 0;
+            top: 0;
         }
     }
 }

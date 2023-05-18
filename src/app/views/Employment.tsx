@@ -27,7 +27,7 @@ export const Employment = () => {
             dragDirectionLock
             dragSnapToOrigin={true}
             onDrag={handleDrag}>
-                <h2 className="title">Previous Work</h2>
+                <h2 className="title">Work Experience</h2>
                 <motion.div className='workplaceArea'
                 initial={{ y: -200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

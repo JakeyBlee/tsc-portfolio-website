@@ -23,8 +23,9 @@
         }
     }
     img.mobile{
-        background-color: var(--background);
-        transition: background-color 0.5s ease-in-out;
+        background-color: var(--text-color);
+        filter: drop-shadow(0 0 20px var(--text-color));
+        transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
         padding: 10px;
         border-radius: 50%;
         display: none;
@@ -75,11 +76,13 @@
 
 @media only screen and (max-width:1000px){
     .banner{
-        background-image: url("/src/resources/media/bannermob.png");
+        background-image: var(--mobile-background);
         background-position: left;
         background-size: auto;
         align-items: center;
         text-align: center;
+        transition: background-image 0.5s ease-in-out;
+        color: var(--text-color);
         .hello {
             h3 {
             font-size: 1.2rem;
@@ -115,7 +118,7 @@
             display: block;
             width: 13rem;
             height: 13rem;
-            padding: 8px;
+            padding: 5px;
         }
         .based {
             margin: 0 0 3rem 0;
