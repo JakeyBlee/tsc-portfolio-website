@@ -175,7 +175,7 @@
   transition-delay: 150ms;
 }
 
-@media (hover: hover) {
+@media only screen and (hover: hover) and (min-width: 600px) {
   .themeSlider:hover {
     cursor: pointer;
     filter: var(--themed-hover-filter);
@@ -349,7 +349,7 @@
     font-size: 14px;
   }
 }
-@media (hover: hover) {
+@media only screen and (hover: hover) and (min-width: 600px) {
   .navbar .navLinks .navLink:hover {
     cursor: pointer;
     filter: var(--themed-hover-filter);
@@ -483,7 +483,7 @@
     font-size: 14px;
   }
 }
-@media (hover: hover) {
+@media only screen and (hover: hover) and (min-width: 600px) {
   .profile .buttonContainer .viewCv:hover {
     cursor: pointer;
     filter: var(--themed-hover-filter);
@@ -646,7 +646,7 @@
     font-size: 16px;
   }
 }
-@media (hover: hover) {
+@media only screen and (hover: hover) and (min-width: 600px) {
   .workplaceCard .buttonContainer .showMore:hover {
     cursor: pointer;
     filter: var(--themed-hover-filter);
@@ -797,7 +797,7 @@
     width: 80px;
   }
 }
-@media (hover: hover) {
+@media only screen and (hover: hover) and (min-width: 600px) {
   .result .buttonContainer .viewCert:hover {
     cursor: pointer;
     filter: var(--themed-hover-filter);
@@ -966,7 +966,7 @@
     font-size: 14px;
   }
 }
-@media (hover: hover) {
+@media only screen and (hover: hover) and (min-width: 600px) {
   .project .buttonContainer .link:hover {
     cursor: pointer;
     filter: var(--themed-hover-filter);
@@ -998,7 +998,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-@media (hover: hover) {
+@media only screen and (hover: hover) and (min-width: 600px) {
   .footer img:hover {
     cursor: pointer;
     transform: scale(1.3);

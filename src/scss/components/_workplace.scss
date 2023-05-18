@@ -136,7 +136,7 @@
     }
 }
 
-@media (hover: hover){
+@media only screen and (hover: hover) and (min-width:600px){
     .workplaceCard {
         .buttonContainer {
             .showMore {
