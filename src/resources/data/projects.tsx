@@ -11,16 +11,6 @@ export interface ProjectType{
 
 export const data : ProjectType[] = [
     {
-        title: 'Wedding RSVP Application',
-        progress: 'future',
-        image: 'wedding.png',
-        buildDate: 'TBC',
-        summary: 'Upcoming project to create a functioning Full-Stack application designed to display wedding venue information and to interface with a custom built API for handling RSVP and menu preference requests.',
-        technologies: [
-            'JavaScript', 'TypeScript', 'React.js', 'Redux.js', 'Router', 'Node.js', 'Express.js', 'CSS', 'SASS', 'SQL', 'PostgreSQL', 'AWS', 'Git', 'GitHub'
-        ]
-    },
-    {
         title: 'Portfolio Website V2',
         progress: 'past',
         liveSite: 'https://jblackburn.netlify.app/',

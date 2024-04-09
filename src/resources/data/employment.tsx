@@ -16,8 +16,13 @@ export const data : Employment[] = [
         dateFrom: 'June 2023',
         dateTo: 'Current',
         summary: 'Working with the Development team based in Birmingham, I help to innovate and build world-class customer journeys on legacy systems at breakneck speed. Serving a multitude of global brands, we turn digital failure into commercial success. We capture growth using data science, insight and creativity.',
+        description:[
+            `Working with the Development team based in Birmingham, I help to innovate and build world-class customer journeys on legacy systems at breakneck speed. Serving a multitude of global brands, we turn digital failure into commercial success. We capture growth using data science, insight and creativity.`,
+            `Shortly after starting at GoodGrowth, I rapidly immersed myself within as many aspects of the platform as possible - working on new features and improving older solutions. Fuelled by the desire to build my own skillset, I explored production standard React.js repositories, Node.js and various aspects of the Google Cloud platform. I also began working within a 24/7 support system to deliver time-critical fixes to production issues as and when required.`,
+            `Within a number of months I was positioned as a mentor/buddy for newer software developers to support their induction into the company, and am now acting as a Tech Lead across multiple clients, including the companies largest. As part of this role, I am regularly involved in client calls discussing upcoming projects and their technical implementation, and work with other developers throughout their lifecycles.`
+        ],
         skills: [
-            'JavaScript', 'TypeScript', 'React.js', 'Cascading Style Sheets (CSS)', 'SASS', 'Teamwork', 'Leadership', 'Communication', 'Git', 'GitHub', 'E-Commerce', 'Innovation', 'Analytics'
+            'JavaScript', 'React.js', 'Cascading Style Sheets (CSS)', 'SASS', 'Google Cloud Platform', 'Teamwork', 'Communication', 'Git', 'GitHub', 'E-Commerce', 'Innovation', 'Analytics'
         ],
         image: 'goodgrowth.png'
     },
